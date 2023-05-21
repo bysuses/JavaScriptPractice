@@ -1,5 +1,5 @@
 {
-  "name": "day2",
+  "name": "day9",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,5 +12,8 @@
     "@babel/eslint-parser": "^7.21.8",
     "eslint": "^8.40.0",
     "eslint-config-airbnb": "^19.0.4"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.11"
   }
 }
