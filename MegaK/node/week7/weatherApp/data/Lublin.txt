@@ -1,0 +1,6 @@
+
+  stacja: Lublin
+  temperatura: 21.1 °C
+  ciśnienie atmosferyczne: 1011.6 hPa
+  wilgotność powietrza: 45.2 %
+23.05.2023, 18:45:06

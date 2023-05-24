@@ -1,0 +1,6 @@
+
+  stacja: Kraków
+  temperatura: 18.9 °C
+  ciśnienie atmosferyczne: 1011.2 hPa
+  wilgotność powietrza: 76.7 %
+23.05.2023, 18:45:31

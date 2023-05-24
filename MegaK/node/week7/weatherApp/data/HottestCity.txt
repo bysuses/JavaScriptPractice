@@ -1,0 +1,6 @@
+
+  stacja: Tarnów
+  temperatura: 24.6 °C
+  ciśnienie atmosferyczne: 1010.1 hPa
+  wilgotność powietrza: 31.2 %
+23.05.2023, 18:45:31
