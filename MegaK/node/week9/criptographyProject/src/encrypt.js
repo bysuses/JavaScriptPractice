@@ -1,8 +1,9 @@
 const { promisify } = require('util');
 const scrypt = promisify(require('crypto').scrypt);
 const randomBytes = promisify(require('crypto').randomBytes);
-const { createCipheriv } = require('crypto');
+const { createCipheriv, createHash: createHmac } = require('crypto');
 const { readFile, writeFile } = require('fs').promises;
+const { SALT, ALGORITHM, ALGORITHM_BYTES } = require('./constants');
 
 /* eslint no-underscore-dangle: ["error", {"allowAfterThis": true }] */
 class Encrypter {
@@ -17,6 +18,11 @@ class Encrypter {
     let content = await readFile(filepath, { encoding: 'utf8' });
     content = content.toString();
     this._unencryptedMessage = content;
+    const creteChecksum = (password, message) => ({
+      passwordHash: createHmac('sha512', SALT).update(password).digest('hex'),
+      messageHash: createHmac('sha512', SALT).update(message).digest('hex'),
+    });
+    this._checksum = creteChecksum(this._password, this._unencryptedMessage);
   }
 
   async encryptMessage() {
@@ -39,19 +45,18 @@ class Encrypter {
     const savedObject = {
       message: this._encryptedMessage,
       iv: this._iv,
+      checksum: this._checksum,
     };
     const savedString = JSON.stringify(savedObject);
     await writeFile(filepath, savedString);
   }
 }
 
-const ALGORITHM = 'aes-192-cbc';
-const SALT = 'sdfgjkWIUEDSJK@#&(*$#$%^&23980354huiodYR&(*werwfhhgEY*F*(EY#*&$hyY&$(&%#(*&EAdyeraewGH&F*((Y#@$F(*)GH#';
 const givenPassword = process.argv[3];
 const givenFile = process.argv[2];
 
 (async () => {
-  const encrypter = new Encrypter(ALGORITHM, 24, SALT, givenPassword);
+  const encrypter = new Encrypter(ALGORITHM, ALGORITHM_BYTES, SALT, givenPassword);
   try {
     await encrypter.readDataFromFile(givenFile);
     await encrypter.encryptMessage();
