@@ -1,0 +1,24 @@
+.lists-div {
+  position: relative;
+  width: 500px;
+  height: 160px;
+  margin: auto;
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.inner-div {
+  position: relative;
+  background-color: rgb(245, 235, 235);
+  width: 50%;
+  height: 100%;
+  outline: solid 1px black;
+  padding-left: 10%;
+}

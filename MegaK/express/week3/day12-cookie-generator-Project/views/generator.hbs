@@ -1,0 +1,26 @@
+<div class="lists-div">
+
+  <div class="inner-div">
+    <p>Doughs :</p>
+    <ul class="list-of-doughs">
+      {{#each doughs}}
+      <li class="{{this.name}}-dough">{{this.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="inner-div">
+    <p>Toppings :</p>
+    <ul class="list-of-toppings">
+      {{#each toppings}}
+      <li class="{{this.name}}-topping">{{this.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+</div>
+
+<script>
+  const recipe = JSON.parse('{{{ recipe }}}');
+</script>
+<script src="../javascripts/generator.js"></script>
