@@ -1,0 +1,29 @@
+{{#with id}}
+<h1>ID:</h1>
+
+<p>
+  {{#if name}}
+  {{name}}
+  {{/if}}
+
+  {{#unless name}}
+  Brak Imienia
+  {{/unless}}
+
+  {{surname}}
+
+</p>
+{{log 'age' age}}
+<p>Age: {{age}}</p>
+
+<p>Profession: {{profession}}</p>
+
+{{/with}}
+<ul>
+  {{#each dates}}
+  <li>{{this}}</li>
+  {{else}}
+  <li>Brak dat</li>
+  {{/each}}
+</ul>
+<div>{{>share}}</div>
