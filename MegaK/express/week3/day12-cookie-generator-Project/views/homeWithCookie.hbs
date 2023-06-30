@@ -1,0 +1,11 @@
+<div class="image-frame-div">
+  <div class="{{dough}}-dough-div image-div"></div>
+  {{#each toppings}}
+  <div class="{{this}}-topping-div image-div"></div>
+  {{/each}}
+</div>
+<button class="generate-another-button">Generuj inne ciastko</button>
+<script>
+  const generateAnotherButton = document.querySelector('.generate-another-button');
+  generateAnotherButton.addEventListener('click', () => window.location.href = '/cookie/generator');
+</script>

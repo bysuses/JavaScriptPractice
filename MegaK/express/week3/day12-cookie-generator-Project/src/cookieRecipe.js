@@ -1,13 +1,13 @@
 const toppings = [
-  { name: 'chockolate', price: 5 },
-  { name: 'coconut', price: 10 },
-  { name: 'cranberries', price: 4 },
-  { name: 'honey', price: 6 },
-  { name: 'sprinkles', price: 3 },
+  { name: 'czekolada', price: 5 },
+  { name: 'kokos', price: 10 },
+  { name: 'żurawina', price: 4 },
+  { name: 'miód', price: 6 },
+  { name: 'posypka', price: 3 },
 ];
 const doughs = [
-  { name: 'chockolate', price: 5 },
-  { name: 'rye', price: 5 },
+  { name: 'czekoladowe', price: 5 },
+  { name: 'żytnie', price: 5 },
 ];
 
 class CookieRecipe {

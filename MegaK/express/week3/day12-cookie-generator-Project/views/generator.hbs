@@ -1,7 +1,7 @@
 <div class="lists-div">
 
   <div class="inner-div">
-    <p>Doughs :</p>
+    <p>Ciasta :</p>
     <ul class="list-of-doughs">
       {{#each doughs}}
       <li class="{{this.name}}-dough">{{this.name}}</li>
@@ -10,7 +10,7 @@
   </div>
 
   <div class="inner-div">
-    <p>Toppings :</p>
+    <p>Dodatki :</p>
     <ul class="list-of-toppings">
       {{#each toppings}}
       <li class="{{this.name}}-topping">{{this.name}}</li>
@@ -20,6 +20,19 @@
 
 </div>
 
+<table class="summary-table">
+  <tr>
+    <th>Wybrane Składniki:</th>
+    <th>Cena całości:</th>
+  </tr>
+  <tr>
+    <td class="ingriedients-td"></td>
+    <td class="price-td"></td>
+  </tr>
+</table>
+<div class="order-button-div">
+  <button class="order-button" type="button" disabled>Zamów</button>
+</div>
 <script>
   const recipe = JSON.parse('{{{ recipe }}}');
 </script>

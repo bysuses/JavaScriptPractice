@@ -22,3 +22,40 @@
   outline: solid 1px black;
   padding-left: 10%;
 }
+
+.summary-table {
+  margin: auto;
+  margin-top: 20px;
+  width: 500px;
+}
+
+th {
+  outline: solid 1px black;
+  width: 50%;
+}
+
+td {
+  outline: solid 1px black;
+  width: 50%;
+  height: 100px;
+}
+
+.price-td {
+  padding-left: 10%;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.order-button-div {
+  margin: auto;
+  margin-top: 20px;
+  width: 250px;
+}
+
+.order-button {
+  width: 100%;
+  height: 50px;
+  background-color: azure;
+  font-weight: bolder;
+  color: rgb(88, 145, 88);
+}

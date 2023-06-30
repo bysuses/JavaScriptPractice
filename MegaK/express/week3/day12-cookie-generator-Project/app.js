@@ -6,8 +6,9 @@ const { cookieRouter } = require('./routes/route');
 const app = express();
 
 app.use(cookieParser());
+app.use(express.json());
 app.use('/cookie', cookieRouter);
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(`${__dirname}/public`));
 
 app.set('view engine', 'hbs');
 app.engine('.hbs', handlebars.engine({
