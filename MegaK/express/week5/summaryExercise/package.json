@@ -1,0 +1,24 @@
+{
+  "name": "summaryexercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.21.8",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb": "^19.0.4"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.1",
+    "express-handlebars": "^7.0.7",
+    "method-override": "^3.0.0",
+    "uuid": "^9.0.0"
+  }
+}
