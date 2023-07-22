@@ -1,0 +1,23 @@
+<h2>List of tasks:</h2>
+<ol>
+  {{#each tasks}}
+  <li>
+    <p>
+      <strong> TASK:</strong>
+      {{this.title}}
+    </p>
+    <p>
+    <form method="POST" action="/todo/{{this._id}}?_method=DELETE">
+      <button type="submit">Remove</button>
+    </form>
+    </p>
+  </li>
+  {{/each}}
+</ol>
+<hr>
+
+<h2>Add a task:</h2>
+<form method="POST" action="/todo">
+  <textarea name="title" cols="30" rows="10"></textarea>
+  <button type="submit">Add</button>
+</form>
