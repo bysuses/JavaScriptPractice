@@ -1,0 +1,24 @@
+<h2>gifts:</h2>
+
+<ol>
+  {{#each gifts}}
+  <li class="gift-li">
+    <p class="gift-p">giftname: {{this.name}}</p>
+    <p class="gift-p">quantity: {{this.quantity}}</p>
+  </li>
+  {{/each}}
+</ol>
+<hr>
+
+<h2>Add new gift: </h2>
+<form action="/gifts" method="POST">
+  <p>
+    <label for="giftName">gift name:</label>
+    <input type="text" name="giftName">
+  </p>
+  <p>
+    <label for="giftQuantity">quantity: </label>
+    <input type="number" name="giftQuantity">
+  </p>
+  <button type="submit">add</button>
+</form>

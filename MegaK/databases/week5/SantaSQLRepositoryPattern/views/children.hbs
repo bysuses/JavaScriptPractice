@@ -1,0 +1,32 @@
+<h2>children:</h2>
+
+<ol>
+  {{#each children}}
+  <li class="child-li">
+    {{this.name}}
+    <form action="/children" class="child-form">
+      <select name="gift" class="gift-select">
+        {{#unless this.giftId}}
+        <option value="" selected></option>
+        {{/unless}}
+        {{#each ../gifts}}
+        <option value='["{{this.id}}","{{../this.id}}"]'>{{this.name}}</option>
+        {{/each}}
+      </select>
+      <button type="submit">save</button>
+    </form>
+  </li>
+  {{/each}}
+</ol>
+
+<hr>
+
+<h2>Add another child:</h2>
+
+<form method="POST" action="/children">
+  <input type="text" name="new-child-name">
+  <button type="submit">add</button>
+</form>
+
+
+<script src="/scripts/children.js"></script>

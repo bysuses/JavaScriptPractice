@@ -1,0 +1,38 @@
+body {
+  background-color: rgb(255, 0, 0, 0.2);
+}
+
+#logo_Image {
+  width: 160px;
+  height: 160px;
+}
+
+#logo-div {
+  float: left;
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+}
+
+h1 {
+  float: left;
+  text-align: left;
+  font-size: 96px;
+  margin: auto;
+  display: block;
+}
+
+#attribution-santa-image {
+  display: block;
+  font-size: 11px;
+}
+
+.menu-link-button {
+  float: left;
+  width: 320px;
+  text-align: center;
+  background-color: lightcoral;
+  padding: 20px;
+  outline-style: double;
+  margin: 10px;
+}
